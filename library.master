@@ -7,14 +7,33 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="./css/StyleSheet.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+     <div id="container">
+        <h1>Mica's Library</h1>
+        <h3>Check What Collections Do We Have</h3>
+        </div>
+        <div id="left_header">
+            <img src="./graphics/logo.jpeg" height="150px" />
+         </div> 
+        
+            <div id="menu">
+                <ul id="nav">
+                    <li></li>
+                </ul>
+            </div>
+
+        <div id="main">
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
+
+        <div id="footer">
+            &copy; 2015 Shan Xiao
+        </div>
     </form>
 </body>
 </html>
