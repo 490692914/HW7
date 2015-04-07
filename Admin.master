@@ -16,7 +16,7 @@
         <h1>Mica's Library</h1>
         <h3>Check What Collections Do We Have</h3>  </div>
          <div id="right_header">
-             &nbsp;&nbsp;<img src="./graphics/logo.jpg" height="150px"/></div> 
+             &nbsp;&nbsp;<img src="./logo.jpg" height="150px"/></div> 
 
    
        
@@ -24,7 +24,7 @@
             <div id="menu">
                 <ul id="nav">
                     <li><a href="./AdminView.aspx">Home</a></li>
-                    <li><a href="./Admin_booksEdited.aspx">Manage Collections</a></li>
+                    <li><a href="./manageCollection.aspx">Manage Collections</a></li>
 
                     <li><a href="./newBook.aspx">Add a New Book</a></li>
                     <li><a href="./search.aspx">Search</a></li>
