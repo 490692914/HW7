@@ -23,13 +23,11 @@
         
             <div id="menu">
                 <ul id="nav">
-                    <li><a href="Default.aspx">Home</a></li>
-                    <li><a href="./admin/admin_booksEdited.aspx">Manage Collections</a></li>
+                    <li><a href="./AdminView.aspx">Home</a></li>
+                    <li><a href="./Admin_booksEdited.aspx">Manage Collections</a></li>
 
-                    <li><a href="./admin/newBook.aspx">Add a New Book</a></li>
-                    <li><a href="about.aspx">About</a></li>
-                    <li><a href="contact.aspx">Contact</a></li>
-                    <li><a href="search.aspx">Search</a></li>
+                    <li><a href="./newBook.aspx">Add a New Book</a></li>
+                    <li><a href="./search.aspx">Search</a></li>
                 </ul>
             </div>
 
@@ -42,6 +40,7 @@
 
         </div>
         <div id="footer">
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             &copy; 2015 Shan Xiao
         </div>
     </form>

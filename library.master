@@ -28,7 +28,7 @@
                     <li><a href="contact.aspx">Contact</a></li>
                     <li><a href="search.aspx">Search</a></li>
                     <li>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login/login.aspx">Login</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
                     </li>
                 </ul>
             </div>
@@ -42,6 +42,7 @@
 
         </div>
         <div id="footer">
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             &copy; 2015 Shan Xiao
         </div>
     </form>
