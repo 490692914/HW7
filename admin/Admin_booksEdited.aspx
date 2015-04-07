@@ -33,12 +33,56 @@
             <asp:Parameter Name="ISBN" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="cssdetailsview" DataKeyNames="ISBN" DataSourceID="SqldetailSource" Height="50px" Width="197px">
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="cssdetailsview" DataKeyNames="ISBN" DataSourceID="SqldetailSource" Height="50px" Width="367px">
         <Fields>
-            <asp:BoundField DataField="ISBN" HeaderText="ISBN" ReadOnly="True" SortExpression="ISBN" />
-            <asp:BoundField DataField="book_name" HeaderText="Title" SortExpression="book_name" />
-            <asp:BoundField DataField="author" HeaderText="Author" SortExpression="author" />
-            <asp:BoundField DataField="edition" HeaderText="Edition" SortExpression="edition" />
+            <asp:TemplateField HeaderText="ISBN" SortExpression="ISBN">
+                <EditItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Eval("ISBN") %>'></asp:Label>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("ISBN") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" CssClass="validationError" ErrorMessage="Please enter ISBN"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("ISBN") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Title" SortExpression="book_name">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("book_name") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("book_name") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" CssClass="validationError" ErrorMessage="Please enter the title"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("book_name") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Author" SortExpression="author">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("author") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("author") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" CssClass="validationError" ErrorMessage="Please enter the Author"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label3" runat="server" Text='<%# Bind("author") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Edition" SortExpression="edition">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("edition") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <InsertItemTemplate>
+                    <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("edition") %>'></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox4" CssClass="validationError" ErrorMessage="Please enter the edition"></asp:RequiredFieldValidator>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("edition") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="year" HeaderText="Year" SortExpression="year" />
             <asp:BoundField DataField="pages" HeaderText="Pages" SortExpression="pages" />
             <asp:BoundField DataField="copies" HeaderText="Copies" SortExpression="copies" />

@@ -16,7 +16,8 @@
         <h1>Mica's Library</h1>
         <h3>Check What Collections Do We Have</h3>  </div>
          <div id="right_header">
-             &nbsp;&nbsp;<img src="./graphics/logo.jpg" height="150px"/></div> 
+             &nbsp;&nbsp;<img src="./graphics/logo.jpg" height="150px"/><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </div> 
 
    
        
@@ -30,6 +31,7 @@
                     <li>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login.aspx">Login</asp:HyperLink>
                     </li>
+                    <li></li>
                 </ul>
             </div>
 
@@ -42,7 +44,6 @@
 
         </div>
         <div id="footer">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             &copy; 2015 Shan Xiao
         </div>
     </form>

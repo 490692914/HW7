@@ -16,7 +16,8 @@
         <h1>Mica's Library</h1>
         <h3>Check What Collections Do We Have</h3>  </div>
          <div id="right_header">
-             &nbsp;&nbsp;<img src="./logo.jpg" height="150px"/></div> 
+             &nbsp;&nbsp;<img src="./logo.jpg" height="150px"/><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </div> 
 
    
        
@@ -29,6 +30,7 @@
                     <li><a href="/siteManger/default.aspx">Manage Users</a></li>
                     <li><a href="./search.aspx">Search</a></li>
                     <li><a href="/Default.aspx">Logout</a></li>
+                    <li></li>
                 </ul>
             </div>
 
@@ -41,7 +43,6 @@
 
         </div>
         <div id="footer">
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
             &copy; 2015 Shan Xiao
         </div>
     </form>
