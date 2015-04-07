@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/library.master" AutoEventWireup="false" CodeFile="Admin_bookdetails.aspx.vb" Inherits="bookdetails" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/library.master" AutoEventWireup="false" CodeFile="Admin_booksEdited.aspx.vb" Inherits="bookdetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="SqldetailSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_sxiao4_hw7 %>" DeleteCommand="DELETE FROM [sxiao4_hw7] WHERE [ISBN] = @ISBN" InsertCommand="INSERT INTO [sxiao4_hw7] ([ISBN], [book_name], [author], [edition], [year], [copies], [location], [pages], [description]) VALUES (@ISBN, @book_name, @author, @edition, @year, @copies, @location, @pages, @description)" SelectCommand="SELECT * FROM [sxiao4_hw7]" UpdateCommand="UPDATE [sxiao4_hw7] SET [book_name] = @book_name, [author] = @author, [edition] = @edition, [year] = @year, [copies] = @copies, [location] = @location, [pages] = @pages, [description] = @description WHERE [ISBN] = @ISBN">
+    <asp:SqlDataSource ID="SqldetailSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_sxiao4_hw7 %>" DeleteCommand="DELETE FROM [sxiao4_hw7] WHERE [ISBN] = @ISBN" InsertCommand="INSERT INTO [sxiao4_hw7] ([ISBN], [book_name], [author], [edition], [year], [copies], [location], [pages], [description]) VALUES (@ISBN, @book_name, @author, @edition, @year, @copies, @location, @pages, @description)" SelectCommand="SELECT * FROM [sxiao4_hw7] WHERE ([ISBN] = @ISBN)" UpdateCommand="UPDATE [sxiao4_hw7] SET [book_name] = @book_name, [author] = @author, [edition] = @edition, [year] = @year, [copies] = @copies, [location] = @location, [pages] = @pages, [description] = @description WHERE [ISBN] = @ISBN">
         <DeleteParameters>
             <asp:Parameter Name="ISBN" Type="String" />
         </DeleteParameters>
@@ -18,6 +18,9 @@
             <asp:Parameter Name="pages" Type="Int32" />
             <asp:Parameter Name="description" Type="String" />
         </InsertParameters>
+        <SelectParameters>
+            <asp:QueryStringParameter Name="ISBN" QueryStringField="ISBN" Type="String" />
+        </SelectParameters>
         <UpdateParameters>
             <asp:Parameter Name="book_name" Type="String" />
             <asp:Parameter Name="author" Type="String" />
@@ -30,7 +33,7 @@
             <asp:Parameter Name="ISBN" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="cssdetailsview" DataKeyNames="ISBN" DataSourceID="SqldetailSource" Height="50px" Width="125px" DefaultMode="Edit">
+    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="cssdetailsview" DataKeyNames="ISBN" DataSourceID="SqldetailSource" Height="50px" Width="197px">
         <Fields>
             <asp:BoundField DataField="ISBN" HeaderText="ISBN" ReadOnly="True" SortExpression="ISBN" />
             <asp:BoundField DataField="book_name" HeaderText="Title" SortExpression="book_name" />
