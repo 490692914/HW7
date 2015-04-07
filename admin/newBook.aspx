@@ -44,5 +44,6 @@
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
     </asp:DetailsView>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="validationError" ErrorMessage="Please enter ISBN"></asp:RequiredFieldValidator>
 </asp:Content>
 
