@@ -45,7 +45,7 @@ h3{font-family:Helvetica;font-variant:small-caps;}
 
 .validationError{color:red; font-weight:bold;}
 
-
+#center{margin-left:auto; margin-right:auto;}
 
 
 .cssgridview { width:100%; margin:5px 0 10px 0; border:solid 1px #525252;
