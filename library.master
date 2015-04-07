@@ -14,11 +14,12 @@
     <form id="form1" runat="server">
      <div id="container">
         <h1>Mica's Library</h1>
-        <h3>Check What Collections Do We Have</h3>
-        </div>
-        <div id="left_header">
-            <img src="./graphics/logo.jpg" height="150px" />
-         </div> 
+        <h3>Check What Collections Do We Have</h3>  </div>
+         <div id="right_header">
+             &nbsp;&nbsp;<img src="./graphics/logo.jpg" height="150px"/></div> 
+
+   
+       
         
             <div id="menu">
                 <ul id="nav">
@@ -33,7 +34,9 @@
         
         </asp:ContentPlaceHolder>
     </div>
+        <div id="blank">
 
+        </div>
         <div id="footer">
             &copy; 2015 Shan Xiao
         </div>
