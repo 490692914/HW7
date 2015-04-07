@@ -25,9 +25,10 @@
                 <ul id="nav">
                     <li><a href="./AdminView.aspx">Home</a></li>
                     <li><a href="./manageCollection.aspx">Manage Collections</a></li>
-
                     <li><a href="./newBook.aspx">Add a New Book</a></li>
+                    <li><a href="/siteManger/default.aspx">Manage Users</a></li>
                     <li><a href="./search.aspx">Search</a></li>
+                    <li><a href="/Default.aspx">Logout</a></li>
                 </ul>
             </div>
 
