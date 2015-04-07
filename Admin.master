@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB" CodeFile="library.master.vb" Inherits="library" %>
+﻿<%@ Master Language="VB" CodeFile="Admin.master.vb" Inherits="library" %>
 
 <!DOCTYPE html>
 
@@ -24,12 +24,12 @@
             <div id="menu">
                 <ul id="nav">
                     <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="./admin/admin_booksEdited.aspx">Manage Collections</a></li>
+
+                    <li><a href="./admin/newBook.aspx">Add a New Book</a></li>
                     <li><a href="about.aspx">About</a></li>
                     <li><a href="contact.aspx">Contact</a></li>
                     <li><a href="search.aspx">Search</a></li>
-                    <li>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/login/login.aspx">Login</asp:HyperLink>
-                    </li>
                 </ul>
             </div>
 

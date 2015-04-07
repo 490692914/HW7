@@ -19,6 +19,7 @@ h3{font-family:Helvetica;font-variant:small-caps;}
            font-variant:small-caps;
            }
 
+
 #nav{ 
     width:auto;
     margin:0 0 3em 0;
@@ -36,8 +37,10 @@ h3{font-family:Helvetica;font-variant:small-caps;}
     font-weight:bold;
     color:#54cae0;
     border-right:1px solid #717171;
+    margin-top: 0px;
 }
 #nav li a:hover{color:#666; background-color:black;}
+
 #maincontent{border:solid black; margin-left:auto; margin-right:auto;}
 
 .validationError{color:red; font-weight:bold;}
